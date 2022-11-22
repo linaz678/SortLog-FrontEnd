@@ -57,8 +57,7 @@ pipeline {
                     sh "aws s3 sync . s3://${S3_BUCKET_NAME}"
                     // sh "aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths '/*'"
              }
-            }
-         
+            }      
          }
 
          }
