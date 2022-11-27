@@ -31,11 +31,7 @@ pipeline {
                    
                     
                         sh '''
-<<<<<<< HEAD
                             export APP_ENV="frontend-p"
-=======
-                            export APP_ENV="frontend"
->>>>>>> fe4ebc12e50c9c8b8d4c645ed91bf269f30edce9
                             terraform init -input=false
                             terraform workspace select ${APP_ENV} || terraform workspace new ${APP_ENV}
                             terraform apply \
@@ -72,11 +68,7 @@ pipeline {
                    
                     
                         sh '''
-<<<<<<< HEAD
                             export APP_ENV="frontend-uat"
-=======
-                            export APP_ENV="uat-p"
->>>>>>> fe4ebc12e50c9c8b8d4c645ed91bf269f30edce9
                             terraform init -input=false
                             terraform workspace select ${APP_ENV} || terraform workspace new ${APP_ENV}
                             terraform destroy \
