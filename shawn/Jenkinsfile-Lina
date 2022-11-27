@@ -19,7 +19,7 @@ pipeline {
         stage('yarn build') 
         {
             steps{
-             sh " yarn export"
+             sh "yarn export "
              sh 'ls -la ./out'
              }
         } 
@@ -31,14 +31,10 @@ pipeline {
                    
                     
                         sh '''
-<<<<<<< HEAD
-                            export APP_ENV="frontend-p"
-=======
-                            export APP_ENV="frontend"
->>>>>>> fe4ebc12e50c9c8b8d4c645ed91bf269f30edce9
+                            export APP_ENV="production-f"
                             terraform init -input=false
                             terraform workspace select ${APP_ENV} || terraform workspace new ${APP_ENV}
-                            terraform apply \
+                            terraform destroy \
                                -var="app_env=${APP_ENV}"\
                                --auto-approve
                         '''
@@ -61,7 +57,8 @@ pipeline {
                     sh "aws s3 sync . s3://${S3_BUCKET_NAME}"
                     // sh "aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths '/*'"
              }
-            }      
+            }
+         
          }
 
          }
@@ -72,11 +69,7 @@ pipeline {
                    
                     
                         sh '''
-<<<<<<< HEAD
-                            export APP_ENV="frontend-uat"
-=======
-                            export APP_ENV="uat-p"
->>>>>>> fe4ebc12e50c9c8b8d4c645ed91bf269f30edce9
+                            export APP_ENV="uat-f"
                             terraform init -input=false
                             terraform workspace select ${APP_ENV} || terraform workspace new ${APP_ENV}
                             terraform destroy \
@@ -108,4 +101,3 @@ pipeline {
 
          }
     }}
-
