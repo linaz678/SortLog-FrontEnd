@@ -19,7 +19,7 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap"
             rel="stylesheet"
           />
-          <link rel="manifest" href="./site.webmanifest" crossOrigin="use-credentials" />
+          
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="description" content="Sortlog" />
           
@@ -29,7 +29,7 @@ class MyDocument extends Document {
           <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
           <link rel="icon" type="image/png" sizes="192x192" href="./android-chrome-192x192.png" />
           <link rel="icon" type="image/png" sizes="512x512" href="./android-chrome-512x512.png" />
-          
+          <link rel="manifest" href="./site.webmanifest" />
           <title>Sortlog</title>
         </Head>
         <body>
