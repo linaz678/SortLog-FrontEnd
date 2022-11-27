@@ -19,7 +19,7 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap"
             rel="stylesheet"
           />
-          <link rel="manifest" href="./site.webmanifest" />
+          <link rel="manifest" href="./site.webmanifest" crossorigin="use-credentials" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="description" content="Sortlog" />
           
